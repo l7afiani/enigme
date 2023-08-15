@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enigme Résolue</title>
+</head>
+<body>
+    <form id="loginForm" action="#" method="POST">
+        <label for="username">Nom d'utilisateur:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        
+        <label for="password">Mot de passe:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        
+        <input type="submit" value="Valider">
+    </form>
+    
+    <div id="message" style="display: none;">
+        <p>
+            Félicitations pour avoir brillamment résolu l'énigme que j'avais posée ! Ta perspicacité et ta détermination ont porté leurs fruits, et c'est avec une grande joie que je te félicite pour cette réussite.
+        </p>
+        <p>
+            Pour marquer cette occasion spéciale, je tiens à t'offrir un cadeau personnalisé. Comme témoignage de ma reconnaissance, tu as le choix entre un portrait que j'ai réalisé avec soin ou bien, si tu le souhaites, tu peux me demander de dessiner quelque chose qui te tient à cœur. Mes compétences n'ont jamais faibli, même après ma retraite, et c'est avec plaisir que je mets mon talent à ta disposition.
+        </p>
+        <p>
+            Encore une fois, bravo pour ton exploit et n'hésite pas à me faire part de ton choix. C'est un plaisir pour moi de célébrer cette victoire avec toi !
+        </p>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            
+            if (username === "flip" && password === "genie") {
+                document.getElementById("message").style.display = "block";
+            } else {
+                alert("Nom d'utilisateur ou mot de passe incorrect.");
+            }
+        });
+    </script>
+</body>
+</html>
